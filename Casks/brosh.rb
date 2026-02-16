@@ -1,10 +1,15 @@
 cask "brosh" do
   version "0.2.2"
 
-  arch arm: "arm64", intel: "x64"
+  on_arm do
+    url "https://github.com/elleryfamilia/brosh/releases/download/v#{version}/brosh-#{version}-arm64.dmg",
+        verified: "github.com/elleryfamilia/brosh/"
+  end
+  on_intel do
+    url "https://github.com/elleryfamilia/brosh/releases/download/v#{version}/brosh-#{version}.dmg",
+        verified: "github.com/elleryfamilia/brosh/"
+  end
 
-  url "https://github.com/elleryfamilia/brosh/releases/download/v#{version}/brosh-#{version}-#{arch}.dmg",
-      verified: "github.com/elleryfamilia/brosh/"
   name "brosh"
   desc "AI-native terminal built for Claude coders"
   homepage "https://github.com/elleryfamilia/brosh"
