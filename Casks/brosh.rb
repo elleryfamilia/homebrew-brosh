@@ -1,5 +1,5 @@
 cask "brosh" do
-  version "0.2.2"
+  version "0.1.0"
 
   on_arm do
     url "https://github.com/elleryfamilia/brosh/releases/download/v#{version}/brosh-#{version}-arm64.dmg",
